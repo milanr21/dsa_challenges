@@ -1,43 +1,31 @@
 // function areAllCharactersUnique(str) {
+//   const charCount = {};
 
-//     const charCount = {};
+//   for (let i = 0; i < str.length; i++) {
+//     const char = str[i];
 
-//     for (let i = 0; i < str.length; i++) {
-//         const char = str[i];
-
-//         if (charCount[char]) {
-//             return false;
-//         }
-
-//         charCount[char] = true;
-//         console.log(charCount);
-
-
+//     if (charCount[char]) {
+//       return false;
 //     }
-//     return true;
 
+//     charCount[char] = true;
+//   }
+//   return true;
 // }
 
-
-
 function areAllCharactersUnique(str) {
-    const charSet = new Set();
+  const charSet = new Set();
 
-    for (let i = 0; i < str.length; i++) {
-        const char = str[i];
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
 
-
-        if (charSet.has(char)) {
-            return false; s
-        }
-
-        charSet.add(char);
+    if (charSet.has(char)) {
+      return false;
     }
 
-    return true;
-
+    charSet.add(char);
+  }
+  return true;
 }
-
-
 
 module.exports = areAllCharactersUnique;
